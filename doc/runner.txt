@@ -1,0 +1,23 @@
+*runner.txt* A code runner.
+*runner*
+
+Copyright (c) 2013 David Shi
+License: The MIT License (MIT)
+
+1. Intro
+Runner is vim plugin that runs your code and outputs in the status bar.
+
+It compiles/interprets single files. The supported languages are:
+
+* Java
+* C
+* C++
+* Python
+* Ruby
+
+2. Usage
+Map the keyboard shortcut.
+nnoremap <silent> <leader>w :NeinspaceClear<CR>
+
+3. About
+https://github.com/initrc/runner
