@@ -6,7 +6,9 @@ let g:loaded_runner = 1
 function! Run()
   let file = @%
   if &filetype == "java"
-    echo system("javac " . file . " && java " . strpart(file, 0, strlen(file) - 5))
+    let classpath = fnamemodify(file, ':h')
+    let classname = fnamemodify(file, ':t:r')
+    echo system("javac " . file . " && java -cp " . classpath . " " . classname)
   elseif &filetype == "c"
     echo system("gcc " . file . " && ./a.out")
   elseif &filetype == "cpp"
