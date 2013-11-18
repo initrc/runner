@@ -3,11 +3,6 @@ if exists("g:loaded_runner")
 endif
 let g:loaded_runner = 1
 
-function! Init()
-  set listchars=tab:>-,trail:.
-  set list
-endfunction
-
 function! Run()
   let file = @%
   if &filetype == "java"
@@ -23,5 +18,4 @@ function! Run()
   endif
 endfunction
 
-call Init()
 command! -nargs=0 RunnerRun :call Run()
