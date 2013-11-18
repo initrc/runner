@@ -15,6 +15,8 @@ It compiles/interprets single files. The supported languages are:
 * Python
 * Ruby
 
+One key to run them all!
+
 2. Usage
 Map the keyboard shortcut.
 nnoremap <silent> <leader>w :NeinspaceClear<CR>

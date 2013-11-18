@@ -2,7 +2,7 @@ Runner
 ======
 
 # Intro
-Runner is vim plugin that runs your code and outputs in the status bar.
+[Runner](https://github.com/initrc/runner) is a vim plugin that runs your code and outputs in the status bar.
 
 It compiles/interprets single files. The supported languages are:
 
@@ -12,13 +12,15 @@ It compiles/interprets single files. The supported languages are:
 * Python
 * Ruby
 
+One key to run them all!
+
 # Install
 [Vundle](https://github.com/gmarik/vundle) is the recommended plugin manager.
 
 Add `Bundle 'initrc/runner'` to `~/.vimrc` and run `:BundleInstall`.
 
 # Usage
-Map the keyboard shortcut in `~/.vimrc`
+Map the keyboard shortcut.
 
 ```
 nnoremap <silent> <leader>r :RunnerRun<CR>
