@@ -5,14 +5,18 @@ let g:loaded_runner = 1
 
 function! Run()
   let file = @%
+  let output = "runner_output"
   if &filetype == "java"
-    let classpath = fnamemodify(file, ':h')
     let classname = fnamemodify(file, ':t:r')
-    echo system("javac " . file . " && java -cp " . classpath . " " . classname)
+    call system("mkdir " . output)
+    echo system("javac -d " . output . " " . file . " && java -cp " . output . " " . classname)
+    call system("rm -rf " . output)
   elseif &filetype == "c"
     echo system("gcc " . file . " && ./a.out")
+    call system("rm a.out")
   elseif &filetype == "cpp"
     echo system("g++ " . file . " && ./a.out")
+    call system("rm a.out")
   elseif &filetype == "python"
     echo system("python " . file)
   elseif &filetype == "ruby"
