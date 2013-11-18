@@ -2,7 +2,7 @@ Runner
 ======
 
 # Intro
-[Runner](https://github.com/initrc/runner) is a vim plugin that runs your code and outputs in the status bar.
+[Runner](https://github.com/initrc/runner) is a vim plugin that runs your code and outputs to the status bar.
 
 It compiles/interprets single files. The supported languages are:
 

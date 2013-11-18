@@ -5,7 +5,7 @@ Copyright (c) 2013 David Shi
 License: The MIT License (MIT)
 
 1. Intro
-Runner is vim plugin that runs your code and outputs in the status bar.
+Runner is vim plugin that runs your code and outputs to the status bar.
 
 It compiles/interprets single files. The supported languages are:
 
