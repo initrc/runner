@@ -4,6 +4,7 @@ endif
 let g:loaded_runner = 1
 
 function! Run()
+  write
   let file = @%
   let output = "runner_output"
   if &filetype == "java"
@@ -21,6 +22,8 @@ function! Run()
     echo system("python " . file)
   elseif &filetype == "ruby"
     echo system("ruby " . file)
+  elseif &filetype == "javascript"
+    echo system("node " . file)
   endif
 endfunction
 

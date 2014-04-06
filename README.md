@@ -11,6 +11,7 @@ It compiles/interprets single files. The supported languages are:
 * C++
 * Python
 * Ruby
+* JavaScript
 
 One key to run them all!
 
@@ -25,3 +26,12 @@ Map the keyboard shortcut.
 ```
 nnoremap <silent> <leader>r :RunnerRun<CR>
 ```
+
+# Changelog
+## 0.2.0
+1. Add support for JavaScript that runs on Node.js
+2. `<leader>r` saves the code before running it
+
+## 0.1.0
+1. Add support for Java, C, C++, Python and Ruby
+2. `<leader>r` to run the code
