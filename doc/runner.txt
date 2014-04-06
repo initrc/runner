@@ -1,7 +1,7 @@
 *runner.txt* A code runner.
 *runner*
 
-Copyright (c) 2013 David Shi
+Copyright (c) 2013-2014 David Shi
 License: The MIT License (MIT)
 
 1. Intro
@@ -14,12 +14,13 @@ It compiles/interprets single files. The supported languages are:
 * C++
 * Python
 * Ruby
+* JavaScript
 
 One key to run them all!
 
 2. Usage
 Map the keyboard shortcut.
-nnoremap <silent> <leader>w :NeinspaceClear<CR>
+nnoremap <silent> <leader>r :RunnerRun<CR>
 
 3. About
 https://github.com/initrc/runner
