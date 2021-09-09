@@ -6,12 +6,13 @@ Runner
 
 It compiles/interprets single files. The supported languages are:
 
-* Java
 * C
 * C++
+* Java
+* JavaScript
+* Kotlin
 * Python
 * Ruby
-* JavaScript
 
 One key to run them all!
 
@@ -28,6 +29,9 @@ nnoremap <silent> <leader>r :RunnerRun<CR>
 ```
 
 # Changelog
+## 0.3.0
+1. Add support for Kotlin
+
 ## 0.2.0
 1. Add support for JavaScript that runs on Node.js
 2. `<leader>r` saves the code before running it

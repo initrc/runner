@@ -3,6 +3,9 @@ if exists("g:loaded_runner")
 endif
 let g:loaded_runner = 1
 
+au BufNewFile,BufRead *.kt setfiletype kotlin
+au BufNewFile,BufRead *.kts setfiletype kotlin
+
 function! Run()
   write
   let file = @%
@@ -12,6 +15,9 @@ function! Run()
     call system("mkdir " . output)
     echo system("javac -d " . output . " " . file . " && java -cp " . output . " " . classname)
     call system("rm -rf " . output)
+  elseif &filetype == "kotlin"
+    echo system("kotlinc " . file . " -include-runtime -d k.jar && java -jar k.jar")
+    call system("rm k.jar")
   elseif &filetype == "c"
     echo system("gcc " . file . " && ./a.out")
     call system("rm a.out")
