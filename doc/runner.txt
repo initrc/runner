@@ -17,12 +17,8 @@ It compiles/interprets single files. The supported languages are:
 * Python
 * Ruby
 
-One key to run them all!
-
 2. Usage
-Map the keyboard shortcut.
-nnoremap <silent> <leader>r :RunnerRun<CR>
+Map the keyboard shortcut in Neovim (vim.pack) with `vim.keymap.set("n", "<leader>rc", "<cmd>RunnerRun<CR>", { desc = "[R]un [C]ode" })`, or in Vim by running `nnoremap <silent> <leader>r :RunnerRun<CR>`.
 
 3. About
 https://github.com/initrc/runner
-

@@ -1,8 +1,6 @@
-Runner
-======
+# Runner
 
-# Intro
-[Runner](https://github.com/initrc/runner) is a vim plugin that runs your code and outputs to the status bar.
+[Runner](https://github.com/initrc/runner) is a vim plugin that runs your code and shows the output in the status bar.
 
 It compiles/interprets single files. The supported languages are:
 
@@ -14,32 +12,19 @@ It compiles/interprets single files. The supported languages are:
 * Python
 * Ruby
 
-One key to run them all!
+# Installation
 
-# Install
-[Vundle](https://github.com/gmarik/vundle) is the recommended plugin manager.
+## Neovim (vim.pack)
+
+Runner is written in Vimscript but it also works with Neovim.
+
+```lua
+vim.pack.add { 'https://github.com/initrc/runner' }
+vim.keymap.set("n", "<leader>rc", "<cmd>RunnerRun<CR>", { desc = "[R]un [C]ode" })
+```
+
+## Vim (Vundle)
 
 Add `Bundle 'initrc/runner'` to `~/.vimrc` and run `:BundleInstall`.
 
-# Usage
-Map the keyboard shortcut.
-
-```
-nnoremap <silent> <leader>r :RunnerRun<CR>
-```
-
-# Changelog
-
-## 0.4.0
-1. Change the run command for Python files to Python3
-
-## 0.3.0
-1. Add support for Kotlin
-
-## 0.2.0
-1. Add support for JavaScript that runs on Node.js
-2. `<leader>r` saves the code before running it
-
-## 0.1.0
-1. Add support for Java, C, C++, Python and Ruby
-2. `<leader>r` to run the code
+To map the keyboard shortcut run `nnoremap <silent> <leader>r :RunnerRun<CR>`.
