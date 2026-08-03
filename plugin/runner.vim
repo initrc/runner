@@ -34,3 +34,9 @@ function! Run()
 endfunction
 
 command! -nargs=0 RunnerRun :call Run()
+
+if !get(g:, 'runner_no_default_mapping', 0)
+      \ && empty(maparg('<Leader>r', 'n'))
+  nnoremap <silent> <Leader>r :RunnerRun<CR>
+endif
+

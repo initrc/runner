@@ -20,8 +20,18 @@ It compiles/interprets single files. The supported languages are:
 One key to run them all!
 
 2. Usage
-Map the keyboard shortcut.
+The default keyboard shortcut is `<leader>r`.
+
+To remap the shortcut, in Neovim add the following snippet to where Runner is registered.
+
+```lua
+keys = { { "<leader>r", "<cmd>RunnerRun<CR>", desc = "Run current file", },
+```
+
+In Vim run:
+```
 nnoremap <silent> <leader>r :RunnerRun<CR>
+```
 
 3. About
 https://github.com/initrc/runner

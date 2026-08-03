@@ -17,29 +17,37 @@ It compiles/interprets single files. The supported languages are:
 One key to run them all!
 
 # Install
+
+## Neovim with lazy.nvim
+
+Runner is written in Vimscript but it also works with Neovim.
+
+Add the following plugin specification to your existing lazy.nvim plugin list:
+
+```lua
+{ "initrc/runner" },
+```
+
+Restart Neovim and run `:Lazy sync`.
+
+## Vim
+
 [Vundle](https://github.com/gmarik/vundle) is the recommended plugin manager.
 
 Add `Bundle 'initrc/runner'` to `~/.vimrc` and run `:BundleInstall`.
 
 # Usage
-Map the keyboard shortcut.
 
+The default keyboard shortcut is `<leader>r`.
+
+To remap the shortcut, in Neovim add the following snippet to where Runner is registered.
+
+```lua
+keys = { { "<leader>r", "<cmd>RunnerRun<CR>", desc = "Run current file", },
+```
+
+In Vim run:
 ```
 nnoremap <silent> <leader>r :RunnerRun<CR>
 ```
 
-# Changelog
-
-## 0.4.0
-1. Change the run command for Python files to Python3
-
-## 0.3.0
-1. Add support for Kotlin
-
-## 0.2.0
-1. Add support for JavaScript that runs on Node.js
-2. `<leader>r` saves the code before running it
-
-## 0.1.0
-1. Add support for Java, C, C++, Python and Ruby
-2. `<leader>r` to run the code
