@@ -29,6 +29,10 @@ nnoremap <silent> <leader>r :RunnerRun<CR>
 ```
 
 # Changelog
+
+## 0.4.0
+1. Change the run command for Python files to Python3
+
 ## 0.3.0
 1. Add support for Kotlin
 

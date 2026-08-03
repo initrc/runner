@@ -1,7 +1,7 @@
 *runner.txt* A code runner.
 *runner*
 
-Copyright (c) 2013-2014 David Shi
+Copyright (c) 2013-2026 David Shi
 License: The MIT License (MIT)
 
 1. Intro
@@ -25,3 +25,4 @@ nnoremap <silent> <leader>r :RunnerRun<CR>
 
 3. About
 https://github.com/initrc/runner
+

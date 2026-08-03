@@ -25,7 +25,7 @@ function! Run()
     echo system("g++ " . file . " && ./a.out")
     call system("rm a.out")
   elseif &filetype == "python"
-    echo system("python " . file)
+    echo system("python3 " . file)
   elseif &filetype == "ruby"
     echo system("ruby " . file)
   elseif &filetype == "javascript"
